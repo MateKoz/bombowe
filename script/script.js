@@ -2,7 +2,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const navBar = document.querySelector(`.navbar`)
     const addShadow = () => {
-        if (window.scrollY >= 86) {
+        if (window.scrollY >= 85) {
             navBar.classList.add('shadow-bg')
         } else {
             navBar.classList.remove('shadow-bg')

@@ -14,19 +14,25 @@
 body {
     font-family: 'Montserrat', sans-serif;
     position: relative;
-    background-color: #444;
     height: 100%;
     width: 100%;
 
 }
 
 html {
-    scroll-padding-top: 86px;
+    scroll-behavior: smooth;
+    scroll-padding-top: 10px;
 }
 
 h1 {
     font-size: 30px;
     text-transform: uppercase;
+}
+
+h2 {
+    text-transform: uppercase;
+    text-align: center;
+    color: #dddddd;
 }
 
 p {
@@ -35,20 +41,20 @@ p {
 }
 
 .shadow-bg {
-    background-color: rgba(0, 0, 0, 1);
+    background-color: rgba(0, 0, 0, 0.99);
 }
 
 nav {
     text-transform: uppercase;
     transition: background-color .6s;
     z-index: 5;
-
 }
+
+
 
 .nav-link {
     color: var(--secondary-color);
     transition: 0.3s;
-    font-weight: bold;
 }
 
 nav a {
@@ -63,18 +69,9 @@ nav a:hover {
     color: var(--secondary-color);
     scale: 1.3;
 }
-
-
 .fa-solid {
     color: var(--secondary-color);
-    padding: 10px;
-    transition: 0.3s;
 }
-
-.fa-solid:hover {
-    color: #dddddd
-}
-
 .navbar-brand {
     font-weight: bold;
     color: var(--secondary-color);
@@ -93,6 +90,7 @@ nav a:hover {
 
 .navbar-toggler:focus {
     box-shadow: none;
+    color: var(--secondary-color);
 }
 
 .logo {
@@ -115,7 +113,14 @@ h1, p, a {
     background-size: cover;
     background-attachment: fixed;
     z-index: 0;
+}
 
+.hero-img-about-us {
+    position: relative;
+    height: 100%;
+    background-image: url('../img/aboutus-hero1.jpg');
+    background-position: center;
+    background-size: cover;
 }
 
 .hero-shadow {
@@ -123,7 +128,6 @@ h1, p, a {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .85);
-    z-index: 1;
     box-sizing: border-box;
     padding: 0;
     margin: 0;
@@ -164,10 +168,21 @@ header h1 span {
     z-index: 4;
 }
 
-h2 {
-    text-transform: uppercase;
-    text-align: center;
+.underline-section {
+    width: 100%;
+    height: 4px;
+    background-color: var(--secondary-color);
+
 }
+
+.about-card {
+    background: rgba(0, 0, 0, .85);
+    transition: 0.3s;
+}
+.about-card:hover {
+    transform: scale(1.1);
+}
+
 
 .about-us i {
     margin-top: 20px;
@@ -179,13 +194,13 @@ h2 {
     font-size: 18px;
     text-transform: uppercase;
     font-weight: bold;
-    color: #333333;
+    color: var(--main-color);
 
 }
 
 .about-card-text {
     font-size: 14px;
-    color: #333333;
+    color: #ffffff;
 
 }
 
@@ -194,15 +209,22 @@ h2 {
 }
 
 .box-hover {
-    border-radius: 5px;
-    border: 1px solid white;
-    transition: background-color .5s;
+    border-radius: 10px;
+    border: 1px solid var(--secondary-color);
+    transition: .3s;
+    padding: 10px;
+    margin: 5px;
 }
 
 .box-hover:hover {
     background-color: var(--secondary-color);
-    border-radius: 5px;
-    color: #dddddd;
+    border-radius: 10px;
+}
+
+.container-center {
+    display: flex;
+    justify-content: center;
+    z-index: 2;
 }
 
 .about-us-hero {
@@ -220,7 +242,7 @@ h2 {
     width: 100%;
     height: 100%;
     background-color: rgba(60, 63, 63, 0.8);
-    z-index: -5;
+    z-index: 1;
 }
 
 .font-color-p {
@@ -252,7 +274,13 @@ h2 {
 
 .about-us-card {
     margin-top: 10px;
+    transition: 0.3s;
 }
+
+.about-us-card:hover {
+    transform: scale(1.1);
+}
+
 
 .carousel-item {
     height: 600px;
@@ -329,8 +357,11 @@ h2 {
 }
 
 .achievement {
-    padding: 30px;
-    background-color: #eae9e9;
+    padding: 10px;
+    background-color: #000000;
+    border: 1px solid var(--secondary-color);
+    margin: 5px;
+    border-radius: 15px;
 }
 
 .contact-button {
@@ -338,13 +369,13 @@ h2 {
     color: var(--secondary-color);
     font-weight: bold;
     padding: 10px 20px;
-
+    border: 1px solid var(--secondary-color);
+    transition: background 0.3s;
 }
 
 .contact-button:hover {
-    color: var(--secondary-color);
+    background: var(--secondary-color);
     transform: scale(1.3);
-    border: 1px solid var(--secondary-color);
 }
 
 
@@ -356,13 +387,15 @@ h2 {
 
 .achievement i {
     font-size: 34px;
-    color: #212529;
+    color: #ffffff;
     padding: 0;
 }
 
 .achievement-text {
     font-size: 14px;
     text-transform: uppercase;
+    color: #ffffff;
+
 }
 
 .contact {
@@ -447,10 +480,6 @@ h2 {
         margin-top: 40px;
         margin-bottom: 40px;
     }
-
-    .navbar {
-        background: rgba(0, 0, 0, .8);
-    }
 }
 
 @media (min-width: 768px) {
@@ -522,6 +551,4 @@ h2 {
 
 
 /*animation  */
-
-
 
