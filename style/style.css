@@ -12,7 +12,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Lato', sans-serif;
     position: relative;
     height: 100%;
     width: 100%;
@@ -40,6 +40,10 @@ p {
     margin-top: 5px;
     color: var(--main-color)
 
+}
+
+.span-name {
+    color: var(--secondary-color);
 }
 
 .shadow-bg {
@@ -77,6 +81,7 @@ nav a:hover {
 }
 
 .navbar-brand {
+    font-family: 'Playfair Display', serif;
     font-weight: bold;
     color: var(--secondary-color);
 
@@ -120,9 +125,8 @@ h1, p, a {
 }
 
 .hero-img-about-us {
-    position: relative;
+    background-image: url("../img/olivier-piquer-PV26u-tR3fw-unsplash.jpg");
     height: 100%;
-    background-image: url('../img/kitchen.jpg');
     background-position: center;
     background-size: cover;
 }
@@ -179,14 +183,38 @@ header h1 span {
 
 }
 
-.about-us-description {
-    font-size: 20px;
-}
 
 .about-us i {
     margin-top: 20px;
     font-size: 30px;
     color: #333333;
+}
+
+.about-us-container {
+    height: 100%;
+    width: 100%;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.face-about-us {
+    height: 300px;
+    width: 300px;
+    background-color: black;
+    border-radius: 10px;
+    border: 2px var(--secondary-color) solid;
+    background-image: url("../img/about-us-image.jpeg");
+    background-position: center;
+    background-size: contain;
+    margin: 0 auto;
+}
+
+.about-us-description {
+    font-size: 20px;
+    padding: 0 15px;
 }
 
 .about-card-title {
@@ -201,6 +229,14 @@ header h1 span {
     color: #ffffff;
 }
 
+.logo {
+    background-image: url("../img/logo.png");
+    background-size: contain;
+    width: 50px;
+    height: 50px;
+
+}
+
 .about-icon {
     color: #dddddd;
 }
@@ -212,7 +248,7 @@ header h1 span {
 .box-hover {
     border-radius: 10px;
     border: 1px solid var(--secondary-color);
-    padding: 10px;
+    padding: 5px 0;
     margin: 5px;
     background-color: rgba(0, 0, 0, .7);
 }
@@ -236,7 +272,7 @@ header h1 span {
     background-image: url('../img/interior-hero.jpg');
     background-position: center;
     background-size: cover;
-    z-index: 0;
+    /*z-index: 0;*/
     color: var(--main-color);
 }
 
@@ -249,8 +285,8 @@ header h1 span {
     z-index: 1;
 }
 
-.font-color-p {
-    color: var(--main-color)
+.font-color-text {
+    color: var(--secondary-color)
 }
 
 .about-us-hero i {
@@ -304,6 +340,7 @@ header h1 span {
     border-radius: 10px;
     border: 1px solid var(--secondary-color);
 }
+
 .portfolio-text {
     text-align: center;
     font-size: 16px;
@@ -379,15 +416,16 @@ header h1 span {
 
 .contact-button {
     text-decoration: none;
-    color: var(--secondary-color);
+    background: var(--secondary-color);
     font-weight: bold;
     padding: 10px 20px;
     border: 1px solid var(--secondary-color);
-=
+    transition: .3s;
 }
 
 .contact-button:hover {
-    background: var(--secondary-color);
+    transform: scale(1.1);
+
 }
 
 .achievement-description {
@@ -467,6 +505,18 @@ header h1 span {
     font-size: 18px;
 }
 
+.font-color-text__footer {
+    color: var(--secondary-color);
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.icon-footer {
+    display: flex;
+    align-items: center;
+    margin: 10px 0;
+}
+
 /*media query*/
 
 @media (min-width: 1200px) {
@@ -529,6 +579,11 @@ header h1 span {
 @media (max-width: 400px) {
     .navbar {
         background: rgba(0, 0, 0, .8);
+    }
+
+    .face-about-us {
+        height: 200px;
+        width: 200px;
     }
 
     .nav-link {
