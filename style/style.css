@@ -401,6 +401,10 @@ header h1 span {
     color: var(--secondary-color);
 }
 
+.card-title {
+    color: white;
+}
+
 .offer-info {
     margin-top: 50px;
     font-size: 18px;
